@@ -88,17 +88,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body class="bg-gray-100 min-h-screen flex flex-col">
 
     <!-- HEADER -->
-    <header class="bg-blue-600 text-white p-4 md:p-6 shadow">
-        <h1 class="text-lg md:text-2xl font-bold"> Upload Artikel
+    <?php include __DIR__ . '/../app/views/navbar.php'; ?>
+        <h1 class="text-lg md:text-2xl font-bold text-center"> Upload Artikel
         </h1>
-    </header>
 
     <!-- MAIN -->
     <main class="flex-grow max-w-xl mx-auto w-full p-4 md:p-6">
 
-        <a href="index.php" class="inline-block mb-4 text-blue-600 hover:underline text-sm flex item-center gap-1">
-            <ion-icon name="return-up-back" class="text-xl hover:underline"></ion-icon> <span>Home</span>
-        </a>
+        <a href="daftar-isi.php"
+                class="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white px-2 py-1 rounded-lg text-sm font-medium shadow mb-2 transition-all duration-500 ease-in-out">
+                <ion-icon name="chevron-back-outline" class="text-xl"></ion-icon> Back
+            </a>
 
         <div class="bg-white p-5 md:p-6 rounded-xl shadow">
 
@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
 
                 <button type="submit"
-                    class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition">
+                    class="w-full bg-sky-500 hover:bg-sky-600 text-white py-2 rounded-lg font-medium transition-all duration-500 ease-in-out">
                     Upload Artikel
                 </button>
 
@@ -154,12 +154,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-white border-t">
-        <div class="max-w-xl mx-auto px-4 py-4 text-center text-xs md:text-sm text-gray-500">
-            © <?= date('Y') ?> Web Kelas 3A · Dibuat oleh
-            <span class="font-medium text-gray-700">Heru Nur Cahyono</span>
-        </div>
-    </footer>
+    <?php include __DIR__ . '/../app/views/footer.php'; ?>
 
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
